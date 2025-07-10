@@ -34,14 +34,14 @@ app.use("/api/messages" ,messageRoute);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-  // app.get("*", (req, res) => {
-  //   res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
-  // });
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+  });
 }
 
-app.use((req , res)=>{
-    res.send("page not found !!");
-});
+// app.use((req , res)=>{
+//     res.send("page not found !!");
+// });
 
 server.listen(PORT,(req, res)=>{
      console.log(`THE SERVER HAS STARTED AT PORT ${PORT}`);
