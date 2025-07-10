@@ -1,0 +1,12 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build":"npm install --prefix bekened && npm install --prefix frontend && npm run build frontend",
+    "start": "npm run start --prefix bekened"
+  },
+  "author": "govind barde",
+  "license": "ISC",
+  "description": ""
+}
