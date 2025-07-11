@@ -16,8 +16,6 @@ dotenv.config();
 
 const PORT = process.env.PORT || 5001;
 
-
-
 app.use(cors({
   origin: process.env.NODE_ENV === "production"
     ? "https://your-frontend-app.onrender.com" 
