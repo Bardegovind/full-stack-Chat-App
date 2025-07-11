@@ -225,14 +225,13 @@ const MessageInput = () => {
             onChange={hendelImageChange}
           />
 
-          <button
-            type='button'
-            className={`btn btn-circle ${imagePreview ? "text-emerald-500" : "text-zinc-400"}`}
+         <button
+          type="button"
+            className={`btn btn-circle btn-xs ${imagePreview ? "text-emerald-500" : "text-zinc-400"}`}
             onClick={() => fileInputRef.current.click()}
-          >
-            <ImageIcon className="w-4 h-4" />
-          </button>
-
+>
+           <ImageIcon className="w-3 h-3" />
+           </button>
           {/* ✅ Expression Emoji for Logged-in User */}
           <span className="text-2xl">
             {emojiMap[selectedUserExpression] || <FaceExpressionDetector/>}
@@ -245,7 +244,7 @@ const MessageInput = () => {
           className='btn btn-sm btn-circle opacity-60'
           disabled={!text.trim() && !imagePreview}
         >
-          <Send size={30} />
+          <Send size={20} />
         </button>
       </form>
 
